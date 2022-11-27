@@ -6,6 +6,8 @@ ENV TZ Asia/Seoul
 ENV PYTHONIOENCODING UTF-8
 ENV LC_CTYPE C.UTF-8
 
+LABEL maintainer="https://suk.kr"
+
 WORKDIR /root
 
 RUN apt update && apt install -y netcat
