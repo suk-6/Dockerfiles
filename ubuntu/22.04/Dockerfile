@@ -12,3 +12,5 @@ RUN usermod -a -G sudo ubuntu
 
 USER ubuntu
 WORKDIR /home/ubuntu
+
+COPY ./home/* /home/ubuntu/
