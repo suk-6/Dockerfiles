@@ -14,3 +14,6 @@ USER ubuntu
 WORKDIR /home/ubuntu
 
 COPY ./home/* /home/ubuntu/
+RUN git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/v1.1.5/zsh-in-docker.sh)" -- \
+    -t powerlevel10k/powerlevel10k
