@@ -17,4 +17,7 @@ WORKDIR /home/ubuntu
 COPY ./home/* /home/ubuntu/
 RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/v1.1.5/zsh-in-docker.sh)" -- \
     -p https://github.com/zsh-users/zsh-autosuggestions \
-    -p https://github.com/zsh-users/zsh-completions
+    -p https://github.com/zsh-users/zsh-completions \
+    -p https://github.com/zsh-users/zsh-syntax-highlighting
+
+RUN curl -sLf https://spacevim.org/install.sh | zsh
