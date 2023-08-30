@@ -20,6 +20,6 @@ RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/
     -p https://github.com/zsh-users/zsh-completions \
     -p https://github.com/zsh-users/zsh-syntax-highlighting
 
-RUN curl -sLf https://spacevim.org/install.sh | zsh
+RUN curl -sLf https://spacevim.org/install.sh | bash
 
 RUN echo "alias python=python3" >> ~/.zshrc
