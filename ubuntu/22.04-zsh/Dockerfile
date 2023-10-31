@@ -10,6 +10,7 @@ RUN useradd -ms /bin/zsh ubuntu
 RUN echo 'ubuntu:password' | chpasswd
 RUN usermod -a -G sudo ubuntu
 RUN echo 'ubuntu ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+RUN touch /home/ubuntu/.sudo_as_admin_successful
 
 USER ubuntu
 WORKDIR /home/ubuntu

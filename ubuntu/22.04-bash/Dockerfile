@@ -7,9 +7,10 @@ RUN apt install -y vim sudo man-db gcc git curl wget python3 python3-pip libffi-
 RUN yes | unminimize
 
 RUN useradd -ms /bin/bash ubuntu
-RUN echo 'ubuntu:password' | chpasswd
+RUN echo 'ubuntu:1234' | chpasswd
 RUN usermod -a -G sudo ubuntu
 RUN echo 'ubuntu ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+RUN touch /home/ubuntu/.sudo_as_admin_successful
 
 USER ubuntu
 WORKDIR /home/ubuntu
