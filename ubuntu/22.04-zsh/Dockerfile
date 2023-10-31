@@ -22,3 +22,6 @@ RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/
 RUN curl -sLf https://spacevim.org/install.sh | bash
 
 RUN echo "alias python=python3" >> ~/.zshrc
+
+
+# docker build -t woosuknam/sandbox:22.04-zsh --platform=linux/amd64 --push .
